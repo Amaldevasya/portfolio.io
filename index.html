@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Athul Mamachan</title>
 <link rel="icon" href="https://raw.githubusercontent.com/athulmamachan/portfolio/main/Source/Profile1.png" type="image/png">
-<meta name="viewport" content="width=1080, initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -12,15 +12,13 @@ html,body{
   font-family:Arial,Helvetica,sans-serif;
   background:#fff;
   color:#111;
-  width:1080px; /* fixed screen width */
+  width:100%;
   overflow-x:hidden;
 }
 .container{
   display:grid;
   grid-template-columns:35% 65%;
   min-height:100vh;
-  width:1080px;
-  margin:0 auto;
 }
 /* LEFT */
 .left{
@@ -44,6 +42,7 @@ html,body{
 .left h1{font-size:42px;margin-bottom:15px}
 .left h2{font-size:18px;color:#555;margin-bottom:20px}
 .left p{font-size:18px;color:#555;max-width:320px;text-align:center}
+
 /* RIGHT */
 .right{
   height:100vh;
@@ -68,6 +67,7 @@ html,body{
   height:3px;
   background:#111;
 }
+
 /* CARDS */
 .card-group{
   display:flex;
@@ -114,6 +114,7 @@ html,body{
   transform:translate(-50%,-50%) scale(1);
   opacity:1;
 }
+
 /* Card sizes */
 .card-big{width:420px;height:235px;box-shadow:0 6px 16px rgba(0,0,0,.14);}
 .small-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
@@ -155,6 +156,31 @@ html,body{
   gap:25px;
 }
 .contact-icons img{width:50px;height:50px;}
+
+/* MOBILE VIEW FIX */
+@media (max-width:900px){
+  .container{grid-template-columns:1fr;}
+  .left{position:relative;height:auto;padding:40px 25px;}
+  .right{height:auto;overflow:visible;padding:40px 25px;}
+
+  /* OTHER CATEGORIES BIG/SMALL CARDS FIT MOBILE */
+  .card-group{flex-direction:column; gap:20px;}
+  .card-big{width:100%;height:auto;aspect-ratio:16/9;}
+  .card-small{width:100%;height:auto;aspect-ratio:16/9;}
+
+  /* REELS HORIZONTAL SCROLL ON MOBILE */
+  .reels-grid{
+    display:flex;
+    overflow-x:auto;
+    gap:15px;
+    padding-bottom:10px;
+  }
+  .reel-card{
+    flex:0 0 auto;
+    width:140px;
+    aspect-ratio:9/16;
+  }
+}
 </style>
 </head>
 
