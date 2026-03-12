@@ -97,7 +97,7 @@ html,body{
 .card-big::after,
 .card-small::after,
 .reel-card::after{
-  content:"\25B6"; /* Play symbol */
+  content:"\25B6";
   position:absolute;
   top:50%;
   left:50%;
@@ -137,7 +137,7 @@ html,body{
   border-radius:10px;
 }
 .reel-card{
-  flex:0 0 auto; /* prevent shrinking */
+  flex:0 0 auto;
   width:220px;
   aspect-ratio:9/16;
   box-shadow:0 4px 12px rgba(0,0,0,.12);
@@ -156,26 +156,29 @@ html,body{
 }
 .contact-icons img{width:50px;height:50px;}
 
-/* MOBILE */
+/* MOBILE FIX */
 @media (max-width:900px){
-.container{grid-template-columns:1fr}
-.left{position:relative;height:auto;padding:40px 25px}
-.right{height:auto;overflow:visible;padding:40px 25px}
-.card-group{flex-direction:column}
-.card-big{width:100%;height:auto;aspect-ratio:16/9}
-.card-small{width:100%;height:auto;aspect-ratio:16/9}
-/* Reels horizontal scroll on mobile */
-.reels-grid{
-  display:flex;
-  overflow-x:auto;
-  gap:15px;
-  padding-bottom:10px;
-}
-.reel-card{
-  flex:0 0 auto;
-  width:140px;
-  aspect-ratio:9/16;
-}
+  .container{grid-template-columns:1fr}
+  .left{position:relative;height:auto;padding:40px 25px}
+  .right{height:auto;overflow:visible;padding:40px 25px}
+
+  /* Other categories big/small cards fit screen */
+  .card-group{flex-direction:column; gap:20px;}
+  .card-big{width:100%;max-width:100%;height:auto;aspect-ratio:16/9;}
+  .card-small{width:100%;max-width:100%;height:auto;aspect-ratio:16/9;}
+
+  /* Reels horizontal scroll */
+  .reels-grid{
+    display:flex;
+    overflow-x:auto;
+    gap:15px;
+    padding-bottom:10px;
+  }
+  .reel-card{
+    flex:0 0 auto;
+    width:140px;
+    aspect-ratio:9/16;
+  }
 }
 </style>
 </head>
@@ -190,7 +193,6 @@ html,body{
 </aside>
 
 <main class="right">
-
 <!-- MUSIC VIDEO -->
 <div class="category">
 <h3>Music Video <img src="https://raw.githubusercontent.com/athulmamachan/portfolio/main/Source/music%20icon.gif"></h3>
