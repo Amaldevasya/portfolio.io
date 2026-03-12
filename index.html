@@ -205,46 +205,7 @@ html,body{
 
 /* MOBILE (UNCHANGED) */
 
-@media (max-width:600px){
-
-.container{
-grid-template-columns:1fr
-}
-
-.left{
-position:relative;
-height:auto;
-padding:40px 25px
-}
-
-.right{
-height:auto;
-overflow:visible;
-padding:40px 25px
-}
-
-.card-group{
-flex-direction:column
-}
-
-.card-big{
-width:100%;
-height:auto;
-aspect-ratio:16/9
-}
-
-.card-small{
-width:100%;
-height:auto;
-aspect-ratio:16/9
-}
-
-.reels-grid{
-display:flex;
-overflow-x:auto;
-}
-
-}
+@media (max-width:900px){ .container{grid-template-columns:1fr} .left{position:relative;height:auto;padding:40px 25px} .right{height:auto;overflow:visible;padding:40px 25px} .card-group{flex-direction:column} .card-big{width:100%;height:auto;aspect-ratio:16/9} .card-small{width:100%;height:auto;aspect-ratio:16/9} .reels-grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))} }
 
 </style>
 </head>
