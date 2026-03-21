@@ -96,7 +96,7 @@ html,body{
   transition: transform 0.3s ease;
 }
 
-/* Hover zoom */
+/* Hover */
 .card-big:hover img,
 .card-small:hover img,
 .reel-card:hover img{
@@ -142,17 +142,17 @@ html,body{
   box-shadow:0 4px 12px rgba(0,0,0,.12);
 }
 
-/* 🔥 REELS UPDATED */
+/* 🔥 REELS (REFERENCE STYLE) */
 .reels-grid{
   margin-top:45px;
   display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(457.2px, 1fr));
+  grid-template-columns:repeat(2, 1fr);
   gap:20px;
 }
 
 .reel-card{
-  width:457.2px;
-  height:457.2px;
+  width:100%;
+  aspect-ratio:1/1;
   box-shadow:0 4px 12px rgba(0,0,0,.12);
 }
 
@@ -201,13 +201,7 @@ html,body{
 
 /* 🔥 REELS MOBILE */
 .reels-grid{
-  grid-template-columns:repeat(auto-fit, minmax(178px, 1fr));
-  justify-content:center;
-}
-
-.reel-card{
-  width:178px;
-  height:178px;
+  grid-template-columns:1fr;
 }
 
 }
