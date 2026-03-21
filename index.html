@@ -125,6 +125,56 @@ html,body{
   gap:25px;
 }
 .contact-icons img{width:50px;height:50px;}
+
+/* ─── HOVER EFFECT for clickable video cards only ─── */
+
+/* Image zoom on hover */
+a.card-big img,
+a.reel-card img {
+  transition: transform 0.35s ease;
+}
+a.card-big:hover img,
+a.reel-card:hover img {
+  transform: scale(1.07);
+}
+
+/* Dark overlay */
+a.card-big::before,
+a.reel-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  transition: background 0.35s ease;
+  z-index: 1;
+  border-radius: 12px;
+}
+a.card-big:hover::before,
+a.reel-card:hover::before {
+  background: rgba(0,0,0,0.38);
+}
+
+/* Play button */
+a.card-big::after,
+a.reel-card::after {
+  content: "▶";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  font-size: 36px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+a.card-big:hover::after,
+a.reel-card:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
 /* MOBILE */
 @media (max-width:900px){
 .container{
@@ -141,19 +191,16 @@ html,body{
   padding:40px 25px;
 }
 .card-group{flex-direction:column}
-/* BIG */
 .card-big{
   width:100%;
   height:auto;
   aspect-ratio:16/9;
 }
-/* SMALL */
 .card-small{
   width:100%;
   height:auto;
   aspect-ratio:16/9;
 }
-/* REELS MOBILE - 2 per row */
 .reels-grid{
   grid-template-columns:repeat(2,1fr);
   gap:10px;
