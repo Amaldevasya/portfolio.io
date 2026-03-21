@@ -113,6 +113,13 @@ html,body{
   height:236px;
   box-shadow:0 4px 12px rgba(0,0,0,.12);
 }
+/* SHORT STORY - 2 cards, same size as reels */
+.short-story-grid{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(2, 236px);
+  gap:20px;
+}
 /* CONTACT */
 .contact-section{
   margin:120px 0 60px;
@@ -125,9 +132,7 @@ html,body{
   gap:25px;
 }
 .contact-icons img{width:50px;height:50px;}
-
 /* ─── HOVER EFFECT for clickable video cards only ─── */
-
 /* Image zoom on hover */
 a.card-big img,
 a.reel-card img {
@@ -137,7 +142,6 @@ a.card-big:hover img,
 a.reel-card:hover img {
   transform: scale(1.07);
 }
-
 /* Dark overlay */
 a.card-big::before,
 a.reel-card::before {
@@ -153,7 +157,6 @@ a.card-big:hover::before,
 a.reel-card:hover::before {
   background: rgba(0,0,0,0.38);
 }
-
 /* Play button */
 a.card-big::after,
 a.reel-card::after {
@@ -174,7 +177,6 @@ a.reel-card:hover::after {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
-
 /* MOBILE */
 @media (max-width:900px){
 .container{
@@ -209,6 +211,10 @@ a.reel-card:hover::after {
   width:100%;
   height:auto;
   aspect-ratio:1/1;
+}
+.short-story-grid{
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
 }
 }
 </style>
@@ -260,6 +266,18 @@ a.reel-card:hover::after {
 <div class="card-group">
 <div class="card-big"><img src="https://raw.githubusercontent.com/athulmamachan/portfolio/main/Source/baby.jpg"></div>
 <div class="card-big"><img src="https://raw.githubusercontent.com/athulmamachan/portfolio/main/Source/poga.jpg"></div>
+</div>
+</div>
+<!-- SHORT STORY -->
+<div class="category">
+<h3>Short Story <img src="https://raw.githubusercontent.com/athulmamachan/portfolio/main/Source/Instagram.gif"></h3>
+<div class="short-story-grid">
+<a href="https://www.instagram.com/reel/DUw-BrNEy9r/?igsh=bmcyaGt6b2FmY3hp" target="_blank" class="reel-card">
+<img src="https://raw.githubusercontent.com/athulmamachan/portfolio/main/Source/Short Story 1.jpeg">
+</a>
+<a href="https://www.instagram.com/reel/DVu8w-JE6ty/?igsh=M3hkcWZvcjhhZjEz" target="_blank" class="reel-card">
+<img src="https://raw.githubusercontent.com/athulmamachan/portfolio/main/Source/Short Story 2.jpeg">
+</a>
 </div>
 </div>
 <!-- REELS -->
